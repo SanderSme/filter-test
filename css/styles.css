@@ -224,6 +224,10 @@ main {
 }
 
 @media screen and (min-width: 767px) {
+  .mobile.only {
+    display: none;
+  }
+
   .page-container {
     max-width: 80%;
   }

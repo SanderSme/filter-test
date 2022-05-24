@@ -15,7 +15,6 @@ async function getPostDetails() {
     const response = await fetch(API_URL);
     const responseJSON = await response.json();
     const singlePostDetails = responseJSON;
-    console.log(singlePostDetails);
     postHeading.innerHTML = "";
     const postTitle = singlePostDetails.acf.hero_title;
     const postImage = singlePostDetails.acf.hero_image.url;
