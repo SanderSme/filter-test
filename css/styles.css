@@ -93,7 +93,7 @@ main {
 
 .post-container {
   position: relative;
-  height: 500px;
+  height: 700px;
   width: 100%;
 }
 
@@ -108,7 +108,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
+  width: 80%;
 }
 
 .post-img {
@@ -196,7 +196,7 @@ main {
   justify-content: center;
   padding: 10px 0;
   bottom: 15%;
-  top: 28rem;
+  top: 39rem;
   left: 50%;
   transform: translateX(-50%);
 }

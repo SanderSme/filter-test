@@ -140,7 +140,7 @@ if (window.innerWidth <= 768) {
       const postCategory = postData[i].acf.category;
       const postDate = postData[i].date.split("T")[0];
       let counter = i + 1;
-      if (counter === 6) {
+      if (counter === 7) {
         break;
       }
       carouselContent.innerHTML += `<li class="carousel-slide current-slide">
