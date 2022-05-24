@@ -1,0 +1,202 @@
+body {
+  position: relative;
+}
+
+.post-main-img {
+  width: 100%;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.blog-text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+}
+
+.blog-text-2 {
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+}
+
+.post-sub-img {
+  width: 100%;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.flex-container-sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pros-cons-heading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.seperating-line {
+  height: 25rem;
+  width: 2px;
+  background-color: #333;
+  margin: 1rem 2rem;
+}
+
+.text {
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 11rem;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0) transparent rgb(0, 0, 0) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+.error-message {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.overlay-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: #00000090;
+}
+
+.post-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: #00000090;
+  cursor: pointer;
+}
+
+.main-overlay-img {
+  width: 90%;
+  z-index: 999;
+  display: none;
+}
+
+.sub-overlay-img {
+  width: 90%;
+  z-index: 999;
+  display: none;
+}
+
+.big-img {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .blog-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-main-img {
+    width: 60%;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1148px) {
+  .blog-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .blog-text {
+    margin-top: 2rem;
+    width: 55%;
+  }
+
+  .blog-text-2 {
+    margin-top: 2rem;
+  }
+
+  .post-main-img {
+    width: 40%;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+
+  .pros-cons-heading {
+    font-size: 1.5rem;
+  }
+
+  .lds-hourglass:after {
+    left: 32rem;
+  }
+
+  .error-message {
+    margin-bottom: 20rem;
+  }
+
+  .main-overlay-img {
+    height: 80vh;
+    width: unset;
+  }
+
+  .sub-overlay-img {
+    width: 90vw;
+    height: unset;
+  }
+}

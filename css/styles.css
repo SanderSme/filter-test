@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  font-family: "Vollkorn", serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.page-container {
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 428px;
+  background-image: url(/img/hero-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 89px;
+}
+
+.hero-flex-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  left: 58%;
+}
+
+.hero-heading {
+  color: #333;
+  text-align: center;
+}
+
+.hero-text {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.overlay {
+  width: 100%;
+  position: absolute;
+  height: 252px;
+  background: rgb(238, 238, 238);
+  background: linear-gradient(
+    180deg,
+    rgba(238, 238, 238, 0) 0%,
+    rgba(238, 238, 238, 0.1) 10%,
+    rgba(238, 238, 238, 0.2) 20%,
+    rgba(238, 238, 238, 0.3) 30%,
+    rgba(238, 238, 238, 0.5) 40%,
+    rgba(238, 238, 238, 0.6) 50%,
+    rgba(238, 238, 238, 0.8) 60%,
+    rgba(238, 238, 238, 0.9) 70%,
+    rgba(238, 238, 238, 1) 80%
+  );
+  top: 11rem;
+}
+
+.heading-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.heading {
+  width: 100%;
+  color: #333;
+  text-align: center;
+  border-bottom: 3px solid #333;
+}
+
+.post-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.post-img {
+  width: 80%;
+  margin-top: 0rem;
+}
+
+.post-info {
+  margin-top: 1rem;
+  z-index: 99;
+  font-size: 80%;
+}
+
+.post-heading {
+  font-size: 100%;
+}
+
+.button {
+  padding: 0.2rem 1.8rem;
+  background-color: #518aad;
+  text-decoration: none;
+  color: white;
+  border-radius: 1rem;
+  border: 2px solid #33333300;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 2px solid #333;
+  text-decoration: underline;
+}
+
+.prev-button {
+  border: none;
+  cursor: pointer;
+  z-index: 97;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: none;
+}
+
+.next-button {
+  border: none;
+  cursor: pointer;
+  z-index: 97;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background: none;
+}
+
+.carousel-track-container {
+  height: 100%;
+}
+
+.carousel-track {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.carousel-nav {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  bottom: 15%;
+  top: 28rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 0, 0, 0.3);
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.general-heading {
+  width: 100%;
+  color: #333;
+  text-align: center;
+  border-bottom: 3px solid #333;
+  margin-top: 7rem;
+}
+
+@media screen and (min-width: 767px) {
+  .page-container {
+    max-width: 80%;
+  }
+
+  .post-container {
+    height: 700px;
+  }
+
+  .post {
+    width: 45%;
+  }
+
+  .post-img {
+    margin-top: 0;
+  }
+
+  .post-info {
+    font-size: 100%;
+  }
+
+  .post-heading {
+    font-size: 1.5rem;
+  }
+
+  .carousel-nav {
+    top: 40rem;
+  }
+}
+
+@media screen and (min-width: 1148px) {
+  .page-container {
+    max-width: 1110px;
+  }
+
+  .post-container {
+    text-align: center;
+    height: 800px;
+  }
+
+  .post {
+    width: 50%;
+  }
+
+  .hero-banner {
+    height: 1015px;
+  }
+
+  .overlay {
+    height: 840px;
+  }
+
+  .hero-heading {
+    font-size: 4rem;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+  }
+
+  .heading-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    top: 57rem;
+  }
+
+  .heading {
+    border-bottom: none;
+    font-size: 2.5rem;
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    background: #333;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .carousel-slide {
+    top: -15rem;
+  }
+
+  .prev-button {
+    top: 35%;
+  }
+
+  .next-button {
+    top: 35%;
+  }
+
+  .general-heading-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .general-line {
+    width: 100%;
+    height: 2px;
+    background: #333;
+    margin-top: 7rem;
+  }
+
+  #left-line {
+    margin-right: 54px;
+  }
+
+  #right-line {
+    margin-left: 54px;
+  }
+
+  .general-heading {
+    border-bottom: none;
+    font-size: 2.5rem;
+  }
+}

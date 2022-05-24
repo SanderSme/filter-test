@@ -1,0 +1,147 @@
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#myFilter {
+  width: 80%;
+  height: 2rem;
+  border-radius: 5px;
+}
+
+.blog-post-img {
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.post-heading {
+  text-align: center;
+}
+
+.blog-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.summary {
+  margin-top: 1rem;
+  line-height: 1.8rem;
+}
+
+#read-more-button {
+  margin-bottom: 5rem;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+}
+
+.view-more-posts {
+  font-size: 1rem;
+  margin-top: 4rem;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 11rem;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0) transparent rgb(0, 0, 0) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+.error-message {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+@media screen and (min-width: 1148px) {
+  .filter {
+    display: flex;
+    justify-content: unset;
+    margin-top: 2rem;
+  }
+
+  #myFilter {
+    width: 30%;
+  }
+
+  .blog-post-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6.9rem;
+    width: 100%;
+  }
+
+  .blog-post {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .blog-info-container {
+    align-items: flex-start;
+    width: 30%;
+  }
+
+  .blog-post-img {
+    width: 30%;
+    z-index: 99;
+  }
+
+  .lds-hourglass:after {
+    left: 32rem;
+  }
+
+  .error-message {
+    margin-bottom: 20rem;
+  }
+}
